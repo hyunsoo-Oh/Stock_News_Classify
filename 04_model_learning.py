@@ -15,7 +15,7 @@ print(x_test.shape, y_test.shape)
 
 model = Sequential()
 model.add(Embedding(14293, 300))
-model.build(input_shape=(None, 14293))
+model.build(input_shape=(None, 40))
 model.add(Conv1D(32, kernel_size=5, padding='same', activation='relu'))
 model.add(MaxPooling1D(pool_size=1))
 model.add(LSTM(128, activation='tanh', return_sequences=True))
